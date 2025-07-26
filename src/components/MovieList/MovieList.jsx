@@ -2,11 +2,11 @@ import React from 'react';
 import './MovieList.scss';
 import { MovieCard } from '../MovieCard/MovieCard';
 
-export const MovieList = ({ list }) => {
+export const MovieList = ({ movies }) => {
   return (
     <div className="movies" data-cy="movieList">
-      {list.map(movie => (
-        <MovieCard key={movie.imdbId} item={movie} />
+      {movies.map(movie => (
+        <MovieCard key={movie.imdbId} movie={movie} />
       ))}
     </div>
   );
